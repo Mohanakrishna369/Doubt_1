@@ -30,6 +30,7 @@ btnInit.addEventListener('click', async () => {
     }
     inicio = true;
     reset(false);
+    document.getElementById('input-aux').focus(); 
 });
 
 
