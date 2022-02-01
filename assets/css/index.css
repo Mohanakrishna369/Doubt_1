@@ -132,7 +132,9 @@ h2 {
 
 #input-aux {
     position: absolute;
-    margin-left: 10000px;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 
