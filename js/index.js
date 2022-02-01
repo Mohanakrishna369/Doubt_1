@@ -29,8 +29,8 @@ btnInit.addEventListener('click', async () => {
         secret.innerHTML += value;
     }
     inicio = true;
-    reset(false);
-    document.getElementById('input-aux').focus(); 
+    reset(false); 
+    document.getElementById('input-aux').focus();
 });
 
 
