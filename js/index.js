@@ -6,7 +6,9 @@ let inicio = false;
 let erros = [];
 let count = 14; 
 
-document.getElementById('new-word').focus();
+if (navigator.userAgentData != undefined && navigator.userAgentData.mobile) {
+    alert("é mobile");
+}
 
 const reset = (desistir) => {
     for(let i = 14; i < 24; i++) {
