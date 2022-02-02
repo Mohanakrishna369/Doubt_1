@@ -6,9 +6,6 @@ let inicio = false;
 let erros = [];
 let count = 14; 
 
-if (navigator.userAgentData != undefined && navigator.userAgentData.mobile) {
-    alert("é mobile");
-}
 
 const reset = (desistir) => {
     for(let i = 14; i < 24; i++) {
@@ -20,6 +17,9 @@ const reset = (desistir) => {
     document.getElementById('new-word').style.display = desistir ? 'block' : 'none';
     document.getElementById('add-word').style.display = desistir ? 'block' : 'none';
     document.getElementById('desistir').style.display = desistir ? 'none' : 'block';
+    if(window.screen.width <= 650 || window.innerWidth <= 650) {
+        document.getElementById('input-aux').style.display = desistir ? 'none' : 'block';
+    }
 }
 
 btnInit.addEventListener('click', async () => {
@@ -34,7 +34,6 @@ btnInit.addEventListener('click', async () => {
     }
     inicio = true;
     reset(false); 
-    document.getElementById('input-aux').focus();
 });
 
 
@@ -42,6 +41,13 @@ document.getElementById('desistir').addEventListener('click', () => {
     reset(true);
     document.querySelector(".word-secret").innerHTML = '';
     inicio = false;
+});
+
+
+document.querySelector("#input-aux").addEventListener('keypress', () => {
+    setTimeout(() => {
+        document.getElementById('input-aux').value = '';
+    }, 500);
 });
 
 
@@ -87,6 +93,7 @@ const gameOver = (resp) => {
         document.getElementById('new-word').style.display = 'block';
         document.getElementById('add-word').style.display = 'block';
         document.getElementById('desistir').style.display = 'none';
+        document.getElementById('input-aux').style.display = 'none';
     }
 }
 

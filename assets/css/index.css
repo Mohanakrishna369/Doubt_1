@@ -131,10 +131,17 @@ h2 {
 }
 
 #input-aux {
+    display: none;
     position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
+    width: 80px;
+    height: 25px;
+    margin-top: -22px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: center;
 }
 
 
@@ -152,7 +159,6 @@ h2 {
   }
   .container-word {
     align-self: center;
-    flex-direction: column-reverse;
     margin-left: 0;
     margin-inline: 20px;
     padding-bottom: 20px;
@@ -160,6 +166,15 @@ h2 {
   #desistir {
     margin-block: 0;
   } 
+}
+
+
+@media (max-width: 650px) {
+  .container-word {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 
