@@ -6,6 +6,8 @@ let inicio = false;
 let erros = [];
 let count = 14; 
 
+document.getElementById('new-word').focus();
+
 const reset = (desistir) => {
     for(let i = 14; i < 24; i++) {
         document.getElementById(`r${i}`).style.background = 'white';
